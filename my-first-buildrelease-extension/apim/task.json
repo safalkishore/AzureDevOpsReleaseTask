@@ -1,0 +1,59 @@
+{
+    "id": "EC094CCE-65F4-456E-8A2D-56E3DCAB0909",
+    "name": "apim-addupdate",
+    "friendlyName": "CSEO API Management - Create or Update API",
+    "description": "CSEO API Management - Create or Update API",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "SafalKishore",
+    "version": {
+        "Major": 1,
+        "Minor": 5,
+        "Patch": 1
+    },
+    "instanceNameFormat": "CSEO API Management - Create/Update API $(samplestring)",
+    "inputs": [
+        {
+            "name": "ConnectedServiceName",
+            "aliases": [
+                "azureSubscription"
+            ],
+            "type": "connectedService:AzureRM",
+            "label": "Azure subscription",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Select the Azure Resource Manager subscription"
+        },
+        {
+            "name": "samplestring",
+            "type": "string",
+            "label": "Sample String",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "A sample string"
+        },
+        {
+            "name": "Action",
+            "type": "pickList",
+            "label": "Action",
+            "required": false,
+            "helpMarkDown": "Action to be performed on the App Service. You can Start, Stop, Restart, Slot swap, Install site extensions or enable Continuous Monitoring for an Azure App Service",
+            "defaultValue": "Swap Slots",
+            "options": {
+                "Swap Slots": "Swap Slots",
+                "Start Azure App Service": "Start App Service",
+                "Stop Azure App Service": "Stop App Service",
+                "Restart Azure App Service": "Restart App Service",
+                "Install Extensions": "Install Extensions",
+                "Enable Continuous Monitoring": "Enable Continuous Monitoring",
+                "Start all continuous webjobs": "Start All Continuous Webjobs",
+                "Stop all continuous webjobs": "Stop All Continuous Webjobs"
+            }
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}

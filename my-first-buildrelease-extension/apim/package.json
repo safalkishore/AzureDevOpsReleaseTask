@@ -1,0 +1,20 @@
+{
+  "name": "cseo-apim-buildandrelease-extension",
+  "version": "1.0.0",
+  "description": "CSEO Azure API Management suite and more VSTS extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Microsoft-CSEO",
+  "license": "ISC",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.7.1",
+    "vss-web-extension-sdk": "^5.141.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.2",
+    "@types/q": "^1.5.1",
+    "typescript": "^3.1.5"
+  }
+}
